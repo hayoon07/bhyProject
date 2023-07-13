@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+        <title>Main</title>
+    {% endblock %}
+</head>
+<body style="background-color: azure;">
+    <nav>
+        <a href="{% url 'main' %}" style="color: blueviolet;">Main</a>
+        <a href="{% url 'introduce' %}" style="color: blueviolet;">Introduce</a>
+        <a href="{% url 'study' %}" style="color: blueviolet;">Study</a>
+    </nav>
+    {% block content %}
+        <style>
+            h3{color: darkblue;}
+        </style>
+        <header>
+            <h1>Main Page</h1>
+            <hr>
+            <h2>Baekhayun</h2>
+        </header>
+        <nav>
+            <h3>페이지 목록</h3>
+            <ol>
+                <li>Introduce
+                    <ul>
+                        <li>자기소개</li>
+                        <li>아이디어톤 서비스 소개</li>
+                    </ul>
+                </li>
+                <li>Study
+                    <ul>
+                        <li>1학기 멋사 활동 회고</li>
+                    </ul>
+                </li>
+            </ol>
+        </nav>
+    {% endblock %}
+    <hr>
+    <footer>
+        Copyright &copy; 성공회대학교 멋쟁이사자처럼 11기 백하윤
+    </footer>
+</body>
+</html>
